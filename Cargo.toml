@@ -1,0 +1,33 @@
+[package]
+name = "franim"
+version = "0.0.0"
+license = "Unlicense"
+authors = ["Jonathan Cornaz"]
+edition = "2021"
+rust-version = "1.74"
+repository = "https://github.com/jcornaz/franim"
+description = "A frame animation library for `no_std` game-development"
+categories = ["no-std", "game-development"]
+keywords = ["no_std", "gamedev", "animation"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+
+[dev-dependencies]
+
+[lints.rust]
+future_incompatible = "deny"
+nonstandard_style = "deny"
+unsafe_code = "deny"
+private_interfaces = "warn"
+private_bounds = "warn"
+rust_2018_idioms = "warn"
+missing_docs = "allow"
+
+[lints.clippy]
+exhaustive_enums = "warn"
+exhaustive_structs = "warn"
+pedantic = "warn"
