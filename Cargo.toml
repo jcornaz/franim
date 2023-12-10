@@ -21,6 +21,7 @@ std = []
 [dependencies]
 
 [dev-dependencies]
+rstest = { version = "0.18.2", default-features = false }
 
 [lints.rust]
 future_incompatible = "deny"
@@ -29,7 +30,7 @@ unsafe_code = "deny"
 private_interfaces = "warn"
 private_bounds = "warn"
 rust_2018_idioms = "warn"
-missing_docs = "allow"
+missing_docs = "warn"
 
 [lints.clippy]
 exhaustive_enums = "warn"
