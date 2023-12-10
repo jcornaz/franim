@@ -40,8 +40,15 @@ pub struct Animation {
 
 impl Animation {
     /// Creates a new animation from total number of frame and duration for each frame
+    ///
+    /// The `frame_duration` must be bigger than zero.
+    ///
+    /// # Panics
+    ///
+    /// Panics if `frame_duration` is zero
     #[must_use]
     pub fn from_frame_duration(frame_count: usize, frame_duration: Duration) -> Self {
+        assert!(!frame_duration.is_zero(), "frame-duration must not be zero");
         Self {
             frame_count,
             current_frame: 0,
