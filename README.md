@@ -1,6 +1,10 @@
 # franim
 
 ![rustc](https://img.shields.io/badge/rustc-1.74+-blue?logo=rust)
+[![License](https://img.shields.io/crates/l/franim)](#Unlicense)
+[![Crates.io](https://img.shields.io/crates/v/franim)](https://crates.io/crates/franim)
+[![Docs](https://docs.rs/franim/badge.svg)](https://docs.rs/franim)
+
 
 A frame animation library for `no_std` game-development
 
