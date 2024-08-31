@@ -83,6 +83,11 @@ impl AnimationState {
         self.current_frame %= self.frame_count;
     }
 
+    /// Update the animation state with the elapsed `delta_time` where `delta_time` is a fractional number of seconds
+    pub fn update_secs(&mut self, delta_time: f32) {
+        self.update(Duration::from_secs_f32(delta_time));
+    }
+
     /// Returns the current frame index
     #[must_use]
     pub fn current_frame(&self) -> usize {
