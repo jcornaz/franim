@@ -30,15 +30,19 @@
 use core::time::Duration;
 
 /// Animation state
+#[deprecated(since = "0.1.1", note = "`Animation` is renamed to `AnimationState`")]
+pub type Animation = AnimationState;
+
+/// Animation state
 #[derive(Debug, Clone)]
-pub struct Animation {
+pub struct AnimationState {
     frame_count: usize,
     current_frame: usize,
     frame_duration: Duration,
     elapsed: Duration,
 }
 
-impl Animation {
+impl AnimationState {
     /// Creates a new animation from total number of frame and duration for each frame
     ///
     /// The `frame_duration` must be bigger than zero.
