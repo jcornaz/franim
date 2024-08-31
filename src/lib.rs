@@ -61,6 +61,18 @@ impl AnimationState {
         }
     }
 
+    /// Creates a new animation from total number of frame and duration (expressed in seconds, using a `f32`) for each frame
+    ///
+    /// The `frame_duration` must be bigger than zero.
+    ///
+    /// # Panics
+    ///
+    /// Panics if `frame_duration` is zero
+    #[must_use]
+    pub fn from_frame_duration_secs(frame_count: usize, frame_duration: f32) -> Self {
+        Self::from_frame_duration(frame_count, Duration::from_secs_f32(frame_duration))
+    }
+
     /// Update the animation state with the elapsed `delta_time`
     pub fn update(&mut self, delta_time: Duration) {
         self.elapsed += delta_time;

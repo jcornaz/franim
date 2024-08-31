@@ -7,8 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-`Animation` is renamed to `AnimationState`.
-(a deprecated `type Animation = AnimationState`, so this change is not breaking)
+### Changed
+
+* `Animation` is renamed to `AnimationState`.
+  (a deprecated `type Animation = AnimationState`, so this change is not breaking)
+
+### Added
+
+* `AnimationState::from_frame_duration_secs`
 
 
 ## [0.1.0] - 2023-12-10
